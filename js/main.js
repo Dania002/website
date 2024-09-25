@@ -354,3 +354,51 @@ addNums(5, 5);
 
 // oop
 
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+}
+
+Person.prototype.getBirthYear = function() {
+    return this.getFullYear();
+}
+
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+}
+
+// Class 
+
+class Person {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.getFullYear();
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const person1 = new Person('John', 'Deo', '4-3-1980');
+const person2 = new Person('Dania', 'Baradi', '20-11-2002');
+
+person2.dob.getFullYear();
+// 2002
+
+person2.getBirthYear();
+// 2002
+
+person2.getFullName();
+// Dania Baradi
+
+// -----------------------------------------------------------
+
+// DOM 
+
+// https://www.youtube.com/watch?v=hdI2bqOjy3c min --> 1:10:30
